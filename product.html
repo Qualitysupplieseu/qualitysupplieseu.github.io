@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">MAISON SUPPLY</div>
+  <nav>
+    <a href="index.html">Shop</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</header>
+
+<div class="container" style="display:block; max-width:600px; margin:auto;">
+
+  <img src="https://via.placeholder.com/600x400">
+
+  <h2 id="product-name"></h2>
+  <p id="product-price"></p>
+
+  <select>
+    <option>Select Option</option>
+    <option>Standard</option>
+    <option>Premium</option>
+  </select>
+
+  <button onclick="addToCart(productName, productPrice)">Add to Cart</button>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const productName = params.get("name");
+const productPrice = parseInt(params.get("price"));
+
+document.getElementById("product-name").innerText = productName;
+document.getElementById("product-price").innerText = "£" + productPrice;
+</script>
+
+</body>
+</html>
