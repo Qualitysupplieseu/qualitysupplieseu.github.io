@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Cart</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body onload="loadCart()">
+
+<header>
+  <div class="logo">MAISON SUPPLY</div>
+  <nav>
+    <a href="index.html">Shop</a>
+  </nav>
+</header>
+
+<div class="container" style="display:block; max-width:600px; margin:auto;">
+
+  <h2>Your Cart</h2>
+
+  <div id="cart-items"></div>
+
+  <div class="checkout-box">
+    <h3>Total: £<span id="total"></span></h3>
+    <button>Proceed to Checkout</button>
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
+
+</div>
+
+</body>
+</html>
